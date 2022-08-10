@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb ON /OFF</title>
+</head>
+<style>
+    button { 
+        padding: 10px; margin:60px; background-color:rgb(39, 166, 58)  ;
+    }
+</style>
+<body>
+
+  <script>
+      function light(value)
+      {
+          var pic;        //create variable pic
+          if(value == 0)
+          {
+              pic="off.jpg"; // pic = location of off bulb
+          }
+          else
+          {
+              pic="on.jpg"; // pic = location of on bulb 
+          }
+          document.getElementById('bulb').src=pic;   //--HERE I LINK PIC WITH TAG <IMG> WITH ID "BULB".     
+      }                                              //-IN LAST STEP , I AM GOING TO CALL FUNCTION LIGHT() FROM BOTH BUTTON 
+  </script>  
+
+    <img id="bulb" src="off.jpg">
+
+    <button onclick="light(1)">turn ON</button>
+    <button  onclick="light(0)">turn OFF</button>
+</body>
+</html>
